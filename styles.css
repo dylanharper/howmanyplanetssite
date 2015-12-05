@@ -1,0 +1,33 @@
+h1{
+    padding: 0px;
+    margin: 0px;
+}
+
+h4{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+.filterSection li {
+    list-style: none;
+    margin: 0px;
+    padding: 5px;
+    display: inline;
+     
+}
+.filterSection {
+    margin: 0px;
+    padding: 0px;
+    display: none;
+}
+#itemsToFilter li {
+    list-style: none;
+    background-position: 0 3px;
+    background-repeat: no-repeat;
+    margin: 15px;
+    padding-left: 40px;
+    font-size: 15pt;
+    color: #666;
+}
