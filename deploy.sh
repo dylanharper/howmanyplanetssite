@@ -1,0 +1,1 @@
+gcloud functions deploy update_planets_site --runtime python37 --trigger-topic planets-site

@@ -9,15 +9,6 @@
    <script src="http://code.jquery.com/jquery-1.11.3.min.js">
    </script>
   </link>
-  <script>
-   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-71134702-1', 'auto');
-    ga('send', 'pageview');
-  </script>
  </head>
  <body>
   <div class="container">
@@ -40,43 +31,35 @@
    </a>
    .
    <br/>
+   {% if 'num_planets_eu' in planets_data %}
    <br/>
-   There are 3672 planets listed in the
+   There are {{ planets_data['num_planets_eu'] }} planets listed in the
    <a href="http://exoplanet.eu/catalog/" onclick="trackOutboundLink('http://exoplanet.eu/catalog/'); return false;" target="_blank">
     Exoplanet.eu catalog
    </a>
    .
    <br/>
+   {% endif %}
+   {% if 'num_planets_oec' in planets_data %}
    <br/>
-   There are 3609 planets listed in the
+   There are {{ planets_data['num_planets_oec'] }} planets listed in the
    <a href="http://www.openexoplanetcatalogue.com/" onclick="trackOutboundLink('http://www.openexoplanetcatalogue.com/'); return false;" target="_blank">
     Open Exoplanet Catalog
    </a>
    .
    <br/>
+   {% endif %}
+   {% if 'num_planets_nasa' in planets_data %}
    <br/>
-   There are 3532 confirmed exoplanets listed in the
+   There are {{ planets_data['num_planets_nasa'] }} confirmed exoplanets listed in the
    <a href="http://exoplanetarchive.ipac.caltech.edu/docs/counts_detail.html" onclick="trackOutboundLink('http://exoplanetarchive.ipac.caltech.edu/docs/counts_detail.html'); return false;" target="_blank">
     NASA Exoplanet Archive
    </a>
    .
    <br/>
+   {% endif %}
    <br/>
    <img src="earth_from_space.jpg" alt="fake view of Earth from an imaginary planet">
-   <script>
-    /**
-* Function that tracks a click on an outbound link in Google Analytics.
-* This function takes a valid URL string as an argument, and uses that URL string
-* as the event label.
-*/
-var trackOutboundLink = function(url) {
-   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
-     function () {
-     document.location = url;
-     }
-   });
-}
-   </script>
   </div>
  </body>
 </html>
