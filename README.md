@@ -1,2 +1,3 @@
-# howmanyplanetssite
-A simple website explaining that there are a lot of planets out there.
+# www.howmanyplanetsarethere.com
+
+A simple website showing that there are a lot of planets out there.
