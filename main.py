@@ -5,7 +5,6 @@ from google.cloud import storage
 from google.cloud import kms_v1
 import redis
 import json
-# from jinja2 import Template
 
 def _update_redis(key: str, value: str):
     secrets = _get_secrets()
@@ -78,9 +77,6 @@ def update_planets_site(event, context):
     template = env.get_template('template.html')
     output = template.render(planets_data=planets_data)
 
-    # with open('site/index.html','w') as f:
-    #     f.write(output)
-
-    _upload_data('www.howmanyplanetsarethere.com',
-                 'index.html',
-                 output)
+    _upload_data(bucket_name='www.howmanyplanetsarethere.com',
+                 blob_name='index.html',
+                 data=output)
