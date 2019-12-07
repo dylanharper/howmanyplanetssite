@@ -1,0 +1,65 @@
+<html>
+ <head>
+  <title>
+   How many planets are there?
+  </title>
+  <link href="alien-head.ico" rel="shortcut icon" type="image/x-icon">
+   <link href="styles.css" rel="stylesheet" type="text/css"/>
+   <link href="bootstrap.css" rel="stylesheet" type="text/css"/>
+   <script src="http://code.jquery.com/jquery-1.11.3.min.js">
+   </script>
+  </link>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    How many planets are there?
+   </h1>
+   A lot!
+   <br/>
+   <br/>
+   Ethan
+   <a href="http://scienceblogs.com/startswithabang/2013/01/05/how-many-planets-are-in-the-universe/" target="_blank">
+    estimates
+   </a>
+   there are around 1,000,000,000,000,000,000,000,000 (that's 10^24) planets.
+   <br/>
+   <br/>
+   People on Quora also provide
+   <a href="https://www.quora.com/How-many-planets-are-there" target="_blank">
+    estimates
+   </a>
+   .
+   <br/>
+   {% if 'num_planets_eu' in planets_data %}
+   <br/>
+   There are {{ planets_data['num_planets_eu'] }} planets listed in the
+   <a href="http://exoplanet.eu/catalog/" onclick="trackOutboundLink('http://exoplanet.eu/catalog/'); return false;" target="_blank">
+    Exoplanet.eu catalog
+   </a>
+   .
+   <br/>
+   {% endif %}
+   {% if 'num_planets_oec' in planets_data %}
+   <br/>
+   There are {{ planets_data['num_planets_oec'] }} planets listed in the
+   <a href="http://www.openexoplanetcatalogue.com/" onclick="trackOutboundLink('http://www.openexoplanetcatalogue.com/'); return false;" target="_blank">
+    Open Exoplanet Catalog
+   </a>
+   .
+   <br/>
+   {% endif %}
+   {% if 'num_planets_nasa' in planets_data %}
+   <br/>
+   There are {{ planets_data['num_planets_nasa'] }} confirmed exoplanets listed in the
+   <a href="http://exoplanetarchive.ipac.caltech.edu/docs/counts_detail.html" onclick="trackOutboundLink('http://exoplanetarchive.ipac.caltech.edu/docs/counts_detail.html'); return false;" target="_blank">
+    NASA Exoplanet Archive
+   </a>
+   .
+   <br/>
+   {% endif %}
+   <br/>
+   <img src="earth_from_space.jpg" alt="fake view of Earth from an imaginary planet">
+  </div>
+ </body>
+</html>
